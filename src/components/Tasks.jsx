@@ -17,7 +17,7 @@ function Tasks() {
 
   const filterTasks = (query) => {
     if (!query) {
-      setFilteredTasks([]); // Clear the filtered tasks if no query
+      setFilteredTasks([]); 
     } else {
       const filtered = tasks.filter((task) =>
         task.title.toLowerCase().includes(query.toLowerCase())
@@ -35,7 +35,7 @@ function Tasks() {
   return (
     <>
       <div
-        className="w-full h-screen flex justify-center items-center  text-white"
+        className="w-full h-screen flex justify-center items-center  text-white overflow-hidden"
         style={{
           background:
             "linear-gradient(180.2deg, rgb(30, 33, 48) 6.8%, rgb(74, 98, 110) 131%)",
@@ -43,7 +43,7 @@ function Tasks() {
       >
         <div
           className="mx-3 md:mx-auto my-5 rounded-xl p-5 min-h-[80vh] w-full 
-           md:w-[80%] lg:w-[70%] border-[1px] border-gray-800 relative divide-y divide-gray-800 bg-[#111827]"
+           md:w-[80%] lg:w-[70%] border-[1px] border-gray-800 relative divide-y divide-gray-800 bg-[#111827]" 
         >
           {/* Heading and Serch Bar */}
           <section>
