@@ -1,18 +1,13 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = {
-  tasks : []
-}
+  tasks: [],
+};
 
 const taskSlice = createSlice({
   name: "task",
   initialState,
   reducers: {
-
-    setTasks: (state, action) => {
-      state.tasks = action.payload;
-    },
-
     addTask: (state, action) => {
       const task = {
         id: nanoid(),
@@ -32,22 +27,18 @@ const taskSlice = createSlice({
       );
       state.tasks = sortTasks(state.tasks);
     },
-
   },
 });
 
 const sortTasks = (tasks) => {
   return tasks.sort((a, b) => {
-    // Sort by due date 
     const dateA = new Date(a.end);
     const dateB = new Date(b.end);
 
-    // If due dates are different, sort by date
     if (dateA.getTime() !== dateB.getTime()) {
       return dateA - dateB;
     }
 
-    // If due dates are the same, sort by priority
     const priorityOrder = { high: 1, low: 2 };
     return priorityOrder[a.priority] - priorityOrder[b.priority];
   });

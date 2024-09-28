@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addTask, updateTask } from "../redux/features/taskSlice";
 
-const Form = ({ task = false }) => {
+const Form = ({ task = null }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -54,9 +54,15 @@ const Form = ({ task = false }) => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 bg-gray-800 opacity-80 h-screen w-full"></div>
+      <div
+        className="fixed top-0 left-0 opacity-80 h-screen w-full"
+        style={{
+          background:
+            "linear-gradient(180.2deg, rgb(30, 33, 48) 6.8%, rgb(74, 98, 110) 131%)",
+        }}
+      ></div>
       <div className="fixed top-0 left-0 flex items-center justify-center h-screen w-full">
-        <main className="relative bg-gray-900 p-8 rounded-lg shadow-md w-full max-w-lg ">
+        <div className="relative bg-gray-900 p-8 rounded-lg shadow-md w-full max-w-lg">
           <div className="absolute top-4 right-4 text-2xl text-gray-300">
             <button onClick={closeButtonHandler}>
               <RxCross2 />
@@ -194,7 +200,7 @@ const Form = ({ task = false }) => {
               </div>
             </div>
           </form>
-        </main>
+        </div>
       </div>
     </>
   );

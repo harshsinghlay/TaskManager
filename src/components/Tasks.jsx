@@ -34,22 +34,28 @@ function Tasks() {
 
   return (
     <>
-      <div className="w-full h-screen flex justify-center items-center bg-[#111827] text-white">
+      <div
+        className="w-full h-screen flex justify-center items-center  text-white"
+        style={{
+          background:
+            "linear-gradient(180.2deg, rgb(30, 33, 48) 6.8%, rgb(74, 98, 110) 131%)",
+        }}
+      >
         <div
           className="mx-3 md:mx-auto my-5 rounded-xl p-5 min-h-[80vh] w-full 
-           md:w-[80%] lg:w-[70%] border-[1px] border-gray-800 relative"
+           md:w-[80%] lg:w-[70%] border-[1px] border-gray-800 relative divide-y divide-gray-800 bg-[#111827]"
         >
           {/* Heading and Serch Bar */}
           <section>
             <h1 className="font-bold text-center text-2xl md:text-3xl">
               Task Manager
             </h1>
-            <div className="my-5 flex flex-col gap-4">
-              <div className="flex bg-white rounded-md overflow-hidden p-0.5 relative">
+            <div className="my-5 flex flex-col gap-4 bg-gray-50 rounded-md">
+              <div className="flex rounded-md overflow-hidden p-0.5 relative">
                 <input
                   type="text"
                   placeholder="Search Task"
-                  className="w-full px-3 py-1 border-none text-black outline-none"
+                  className="w-full px-3 py-1 border-none text-black outline-none bg-gray-50"
                   value={searchQuery}
                   onChange={searchInputHandler}
                 />
@@ -68,15 +74,14 @@ function Tasks() {
 
           {/* All Tasks */}
           <section>
-            <div className="space-y-4 max-h-96 overflow-y-auto">
+            <main className="space-y-4 max-h-96 overflow-y-auto py-2">
               {tasksToDisplay?.length === 0 ? (
                 <div className="m-5">No Tasks to display</div>
               ) : (
                 tasksToDisplay.map((task) => <Card key={task.id} task={task} />)
               )}
-            </div>
+            </main>
           </section>
-
         </div>
       </div>
     </>
