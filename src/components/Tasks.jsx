@@ -35,14 +35,14 @@ function Tasks() {
   return (
     <>
       <div
-        className="w-full h-screen flex justify-center sm:items-center sm:py-6 text-white overflow-hidden"
+        className="w-full h-screen flex justify-center items-center sm:py-6 text-white overflow-hidden"
         style={{
           background:
             "linear-gradient(180.2deg, rgb(30, 33, 48) 6.8%, rgb(74, 98, 110) 131%)",
         }}
       >
         <div
-          className="mx-3 md:mx-auto my-5 rounded-xl p-5 min-h-[80vh] w-full 
+          className="mx-3 md:mx-auto my-5 rounded-xl p-5 h-[80vh] w-full 
            md:w-[80%] lg:w-[70%] border-[1px] border-gray-800 relative divide-y divide-gray-800 bg-[#111827]" 
         >
           {/* Heading and Serch Bar */}
