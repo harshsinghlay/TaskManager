@@ -36,7 +36,7 @@ function Tasks() {
     <>
       <div className="w-full h-screen flex justify-center items-center bg-[#111827] text-white">
         <div
-          className="mx-3 md:mx-auto my-5 rounded-xl p-5 min-h-[80vh] 
+          className="mx-3 md:mx-auto my-5 rounded-xl p-5 min-h-[80vh] w-full 
            md:w-[80%] lg:w-[70%] border-[1px] border-gray-800 relative"
         >
           {/* Heading and Serch Bar */}
