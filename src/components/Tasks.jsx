@@ -17,7 +17,7 @@ function Tasks() {
 
   const filterTasks = (query) => {
     if (!query) {
-      setFilteredTasks([]);
+      setFilteredTasks([]); 
     } else {
       const filtered = tasks.filter((task) =>
         task.title.toLowerCase().includes(query.toLowerCase())
@@ -35,15 +35,15 @@ function Tasks() {
   return (
     <>
       <div
-        className="w-full h-screen flex justify-center sm:items-center text-white overflow-hidden"
+        className="w-full h-screen flex justify-center sm:items-center sm:py-6 text-white overflow-hidden"
         style={{
           background:
             "linear-gradient(180.2deg, rgb(30, 33, 48) 6.8%, rgb(74, 98, 110) 131%)",
         }}
       >
         <div
-          className="mx-3 sm:my-6 md:mx-auto my-5 rounded-xl p-5 w-full 
-           md:w-[80%] lg:w-[70%] border-[1px] border-gray-800 relative divide-y divide-gray-800 bg-[#111827]"
+          className="mx-3 md:mx-auto my-5 rounded-xl p-5 h-[90%] w-full 
+           md:w-[80%] lg:w-[70%] border-[1px] border-gray-800 relative divide-y divide-gray-800 bg-[#111827]" 
         >
           {/* Heading and Serch Bar */}
           <section>
@@ -73,8 +73,8 @@ function Tasks() {
           </section>
 
           {/* All Tasks */}
-          <section>
-            <main className="space-y-4 max-h-96 min-h-96 overflow-y-auto py-2">
+          <section className="max-h-[70%] overflow-y-auto ">
+            <main className="space-y-4 py-2">
               {tasksToDisplay?.length === 0 ? (
                 <div className="m-5">No Tasks to display</div>
               ) : (
