@@ -35,7 +35,7 @@ function Tasks() {
   return (
     <>
       <div
-        className="w-full h-screen flex justify-center items-center  text-white overflow-hidden"
+        className="w-full h-screen flex justify-center sm:items-center sm:py-6 text-white overflow-hidden"
         style={{
           background:
             "linear-gradient(180.2deg, rgb(30, 33, 48) 6.8%, rgb(74, 98, 110) 131%)",
