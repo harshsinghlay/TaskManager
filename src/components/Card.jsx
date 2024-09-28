@@ -19,7 +19,7 @@ function Card({ task }) {
   };
 
   return (
-    <div className="w-full overflow-hidden bg-gray-800 rounded-xl py-2 px-3 flex flex-col md:gap-2 md:flex-row md:justify-between">
+    <div className="w-full overflow-hidden bg-gray-800 rounded-xl py-3 px-3 flex flex-col gap-1 sm:gap-2 sm:flex-row sm:justify-between">
       {/* Card Title and Desc */}
       <section className="w-full md:max-w-[60%]">
         <h1 className="text-xl font-semibold line-clamp-1">
@@ -31,10 +31,12 @@ function Card({ task }) {
       </section>
 
       {/* Card Status and Buttons */}
-      <section className="w-full md:min-w-fit md:max-w-[40%] flex justify-center  items-center gap-4 md:gap-6 text-sm">
+      <section className="w-full md:min-w-fit md:max-w-[40%] flex justify-between sm:justify-center  items-center gap-4 md:gap-6 text-sm">
         <span
           className={`px-3 py-1 rounded-full ${
-            task.status === "completed" ? "bg-green-700" : "bg-[#f76606]"
+            task.status === "completed"
+              ? "bg-green-700 text-nowrap"
+              : "bg-[#f76606] text-nowrap"
           }`}
         >
           {task?.status && task.status}

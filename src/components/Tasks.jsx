@@ -59,7 +59,7 @@ function Tasks() {
               <h2 className="text-xl">Your Tasks</h2>
               <button
                 onClick={addButtonHandler}
-                className="bg-blue-800 hover:bg-blue-950 disabled:bg-blue-700 p-3 py-1 text-sm text-white rounded-md font-bold mx-2"
+                className="bg-blue-800 hover:bg-blue-950 disabled:bg-blue-700 px-6 py-2 text-sm text-white rounded-md font-bold mx-2"
               >
                 Add Task
               </button>
