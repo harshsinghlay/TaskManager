@@ -22,16 +22,16 @@ function Card({ task }) {
     <div className="w-full overflow-hidden bg-gray-800 rounded-xl py-3 px-3 flex flex-col gap-1 sm:gap-2 sm:flex-row sm:justify-between">
       {/* Card Title and Desc */}
       <section className="w-full md:max-w-[60%]">
-        <h1 className="text-xl font-semibold line-clamp-1">
+        <h1 className="line-clamp-1 text-xl font-semibold ">
           {task?.title && task.title}
         </h1>
-        <p className="text-gray-300 my-2 line-clamp-1">
+        <p className=" line-clamp-1 text-gray-300 my-2">
           {task?.desc && task.desc}
         </p>
       </section>
 
       {/* Card Status and Buttons */}
-      <section className="w-full md:min-w-fit md:max-w-[40%] flex justify-between sm:justify-center  items-center gap-4 md:gap-6 text-sm">
+      <section className="w-full flex justify-between items-center gap-4 text-sm  sm:justify-center md:gap-6  md:min-w-fit md:max-w-[40%]">
         <span
           className={`px-3 py-1 rounded-full ${
             task.status === "completed"

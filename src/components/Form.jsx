@@ -70,7 +70,7 @@ const Form = ({ task = null }) => {
           </div>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="sm:divide-y sm:divide-gray-700">
-              <div className="sm:py-8 text-base leading-6 space-y-3 sm:space-y-4 text-gray-300 sm:text-lg sm:leading-7 relative">
+              <div className=" text-base leading-6 space-y-3 text-gray-300 relative sm:py-8 sm:space-y-4 sm:text-lg sm:leading-7 ">
                 <div className="flex flex-col">
                   <label className="leading-loose text-gray-400">Title</label>
                   <input

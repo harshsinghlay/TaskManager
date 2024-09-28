@@ -35,15 +35,15 @@ function Tasks() {
   return (
     <>
       <div
-        className="w-full h-screen flex justify-center sm:items-center sm:py-6 text-white overflow-hidden"
+        className="w-full h-screen flex justify-center text-white overflow-hidden sm:items-center sm:py-6 "
         style={{
           background:
             "linear-gradient(180.2deg, rgb(30, 33, 48) 6.8%, rgb(74, 98, 110) 131%)",
         }}
       >
         <div
-          className="mx-3 md:mx-auto my-5 rounded-xl p-5 h-[90%] w-full 
-           md:w-[80%] lg:w-[70%] border-[1px] border-gray-800 relative divide-y divide-gray-800 bg-[#111827]" 
+          className="relative divide-y divide-gray-800 bg-[#111827] p-5 h-full w-full sm:h-[90%] sm:my-5 sm:mx-3 sm:rounded-xl  md:mx-auto  
+           md:w-[80%] lg:w-[70%] " 
         >
           {/* Heading and Serch Bar */}
           <section>
@@ -73,7 +73,7 @@ function Tasks() {
           </section>
 
           {/* All Tasks */}
-          <section className="max-h-[70%] overflow-y-auto ">
+          <section className="overflow-y-auto max-h-[80%] sm:max-h-[70%]  ">
             <main className="space-y-4 py-2">
               {tasksToDisplay?.length === 0 ? (
                 <div className="m-5">No Tasks to display</div>
