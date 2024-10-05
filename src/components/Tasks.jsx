@@ -17,7 +17,7 @@ function Tasks() {
 
   const filterTasks = (query) => {
     if (!query) {
-      setFilteredTasks([]); 
+      setFilteredTasks([]);
     } else {
       const filtered = tasks.filter((task) =>
         task.title.toLowerCase().includes(query.toLowerCase())
@@ -42,13 +42,14 @@ function Tasks() {
         }}
       >
         <div
-          className="relative divide-y divide-gray-800 bg-[#111827] p-5 h-full w-full sm:h-[90%] sm:my-5 sm:mx-3 sm:rounded-xl  md:mx-auto  
-           md:w-[80%] lg:w-[70%] " 
+          className="relative divide-y divide-gray-800 bg-[#111827] p-5 h-full w-full sm:shadow-lg sm:shadow-[#6286d1] sm:h-[90%] sm:my-5 sm:mx-3 sm:rounded-xl  md:mx-auto  
+           md:w-[80%] lg:w-[70%] "
         >
           {/* Heading and Serch Bar */}
           <section>
-            <h1 className="font-bold text-center text-2xl md:text-3xl">
-              Task Manager
+            <h1 className="font-bold text-center text-2xl heading-color md:text-3xl text-[#91c9ec] font-semibold"
+            >
+              TaskMate
             </h1>
             <div className="my-5 flex flex-col gap-4 bg-gray-50 rounded-md">
               <div className="flex rounded-md overflow-hidden p-0.5 relative">
@@ -65,7 +66,7 @@ function Tasks() {
               <h2 className="text-xl">Your Tasks</h2>
               <button
                 onClick={addButtonHandler}
-                className="bg-blue-800 hover:bg-blue-950 disabled:bg-blue-700 px-6 py-2 text-sm text-white rounded-md font-bold mx-2"
+                className="bg-blue-800 hover:bg-blue-950 disabled:bg-blue-700 px-6 py-2 text-sm text-white rounded-md font-bold mx-2 shadow-blue-300 shadow-sm"
               >
                 Add Task
               </button>
@@ -73,7 +74,7 @@ function Tasks() {
           </section>
 
           {/* All Tasks */}
-          <section className="overflow-y-auto max-h-[80%] sm:max-h-[70%]  ">
+          <section className="overflow-y-auto max-h-[80%] custom-scrollbar px-2 sm:max-h-[70%] ">
             <main className="space-y-4 py-2">
               {tasksToDisplay?.length === 0 ? (
                 <div className="m-5">No Tasks to display</div>

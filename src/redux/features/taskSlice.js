@@ -1,7 +1,8 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
+import { defaultTasks } from "../../assets/defaultTasks";
 
 const initialState = {
-  tasks: [],
+  tasks: defaultTasks,
 };
 
 const taskSlice = createSlice({

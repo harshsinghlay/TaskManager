@@ -1,0 +1,58 @@
+import { nanoid } from "@reduxjs/toolkit";
+
+export const defaultTasks = [
+  {
+    id : nanoid(),
+    title: "Update RealEstate App",
+    desc: "Fix the login issue in the authentication of the user and admin",
+    start: "2024-10-05",
+    end: "2024-10-10",
+    status: "in-progress",
+    priority: "low",
+  },
+  {
+    id : nanoid(),
+    title: "Fix Solitare Webapp",
+    desc: "Fix the spin button issue in the solitare app",
+    start: "2024-10-05",
+    end: "2024-10-8",
+    status: "in-progress",
+    priority: "high",
+  },
+  {
+    id : nanoid(),
+    title: "Design Issue ",
+    desc: "Make the responsive design for the webApp",
+    start: "2024-10-08",
+    end: "2024-10-12",
+    status: "completed",
+    priority: "low",
+  },
+  {
+    id : nanoid(),
+    title: "Filter issue fix",
+    desc: "Update changes in the filter issue of the ecommerce app",
+    start: "2024-9-28",
+    end: "2024-10-7",
+    status: "in-progress",
+    priority: "high",
+  },
+  {
+    id : nanoid(),
+    title: "Cors Error Login",
+    desc: "Fix the cors error of the it hub website",
+    start: "2024-10-05",
+    end: "2024-10-15",
+    status: "completed",
+    priority: "low",
+  },
+  {
+    id : nanoid(),
+    title: "New Feature adding",
+    desc: "Add some new features in the woocommerce website",
+    start: "2024-10-08",
+    end: "2024-10-14",
+    status: "in-progress",
+    priority: "high",
+  },
+];

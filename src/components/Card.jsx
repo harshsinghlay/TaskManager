@@ -33,7 +33,7 @@ function Card({ task }) {
       {/* Card Status and Buttons */}
       <section className="w-full flex justify-between items-center gap-4 text-sm  sm:justify-center md:gap-6  md:min-w-fit md:max-w-[40%]">
         <span
-          className={`px-3 py-1 rounded-full ${
+          className={`px-3 py-1 rounded-full  ${
             task.status === "completed"
               ? "bg-green-700 text-nowrap"
               : "bg-[#f76606] text-nowrap"
@@ -41,7 +41,7 @@ function Card({ task }) {
         >
           {task?.status && task.status}
         </span>
-        <span className="text-nowrap ">
+        <span className="text-nowrap">
           {new Date(task.end).toLocaleString("en-US", {
             month: "short",
             day: "numeric",
