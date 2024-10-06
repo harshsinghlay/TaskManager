@@ -47,10 +47,18 @@ function Tasks() {
         >
           {/* Heading and Serch Bar */}
           <section>
-            <h1 className="font-bold text-center text-2xl heading-color md:text-3xl text-[#91c9ec] font-semibold"
-            >
+            <h1 className="text-center text-2xl heading-color border-b-[1px] border-gray-800 pb-4 mb-2 md:text-3xl text-[#91c9ec] font-semibold">
               TaskMate
             </h1>
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-semibold text-gray-200">Your Tasks</h2>
+              <button
+                onClick={addButtonHandler}
+                className="bg-blue-800 hover:bg-blue-950 disabled:bg-blue-700 px-6 py-2 text-sm text-white rounded-md font-bold mx-2 shadow-blue-300 shadow-sm"
+              >
+                Add Task
+              </button>
+            </div>
             <div className="my-5 flex flex-col gap-4 bg-gray-50 rounded-md">
               <div className="flex rounded-md overflow-hidden p-0.5 relative">
                 <input
@@ -61,15 +69,6 @@ function Tasks() {
                   onChange={searchInputHandler}
                 />
               </div>
-            </div>
-            <div className="flex justify-between mb-4">
-              <h2 className="text-xl">Your Tasks</h2>
-              <button
-                onClick={addButtonHandler}
-                className="bg-blue-800 hover:bg-blue-950 disabled:bg-blue-700 px-6 py-2 text-sm text-white rounded-md font-bold mx-2 shadow-blue-300 shadow-sm"
-              >
-                Add Task
-              </button>
             </div>
           </section>
 
